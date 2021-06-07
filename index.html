@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+	body
+		{
+		background-color:rgb(193, 235, 79);
+		}
+	</style>
+ 
+    <script>
+ 
+        function male ()
+        {
+        var liczba1 = document.getElementById("wiek").value;
+        var liczba2 = document.getElementById("masa").value;
+        var wynik = 210 - (liczba1 / 2) - (liczba2 / 5) + 4 
+        document.getElementById("wynik").innerHTML = wynik; 
+        }
+ 
+        function female ()
+        {
+        var liczba1 = document.getElementById("wiek").value;
+        var liczba2 = document.getElementById("masa").value;
+        var wynik = 210 - (liczba1 / 2) - (liczba2 / 5)
+        document.getElementById("wynik").innerHTML = wynik;      
+        }
+ 
+    </script>
+</head>
+ 
+<body>
+<center>
+    <h1>Kalkulator MHR</h1>
+    <h2>Co to jest MHR? </h2>
+    <h3>MHR to tętno maksymalne czyli najwyższa wielkość tętna jaką jesteśmy w stanie osiągnąc obliczana orientacyjnie z wzoru: </h3>
+    <h3><i>Kobiety: MHR = 210 - 0.5 x wiek - 0.022 x waga w kilogramach; <br>
+        Mężczyźni: MHR = 210 - 0.5 x wiek - 0.022 x waga w kilogramach + 4.</i></h3>
+    <h3>Aby skorzystać z kalkulatora podaj kolejno wiek i masa</h3>
+    <input type="text" id="wiek" value=0 />
+    <input type="text" id="masa" value=0 />
+    <input type="submit" value="mężczyzna" onclick="male()" />
+    <input type="submit" value="kobieta" onclick="female()" />
+ 
+    <br>
+    <div id="wynik">Tu będzie wynik </div>
+    
+</center>
+</body>
+ 
+</html>
